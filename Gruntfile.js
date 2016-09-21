@@ -62,6 +62,17 @@ module.exports = function(grunt) {
       },
     },
 
+    concat: {
+      dist: {
+        files: {
+          'www/css/style.css' : [
+            'source/css/vendor/*.css',
+            'source/css/style.css',
+          ],
+        }
+      }
+    },
+
     cssmin: {
       target: {
         files: [{
@@ -101,6 +112,14 @@ module.exports = function(grunt) {
           cwd: 'source/img',
           src: ['**'],
           dest: 'www/img',
+        }],
+      },
+      fonts: {
+        files: [{
+          expand: true,
+          cwd: 'source/fonts',
+          src: ['**'],
+          dest: 'www/fonts',
         }],
       },
     },
@@ -154,7 +173,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-cache-bust');
   grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('sass_globbing');
+  grunt.loadNpmTasks('grunt-sass-globbing');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
