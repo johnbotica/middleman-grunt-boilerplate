@@ -184,7 +184,7 @@ module.exports = function(grunt) {
   //REGISTER CUSTOM TASKS
   grunt.registerTask('default', []);
   grunt.registerTask('build:js', ['browserify', 'uglify']);
-  grunt.registerTask('build:css', ['sass_globbing', 'sass', 'postcss', 'cssmin']);
+  grunt.registerTask('build:css', ['copy:fonts', 'sass_globbing', 'sass', 'postcss', 'concat', 'cssmin']);
   grunt.registerTask('dev', ['copy:images', 'build:css', 'build:js', 'browserSync', 'watch']);
   grunt.registerTask('build', ['build:js', 'build:css', 'cacheBust']); //When MM finishes building. We don't need to copy images here since MM will do it for us.
 };

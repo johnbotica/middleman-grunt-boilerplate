@@ -34,12 +34,12 @@ page '/*.txt', layout: false
 # Helpers
 ###
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+# DEV ASSET SERVER
+  def asset_host
+    build? ? '' : '//localhost:5678'
+  end
+end
 
 # Build-specific configuration
 configure :build do
