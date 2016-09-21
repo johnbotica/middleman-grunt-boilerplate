@@ -1,0 +1,32 @@
+//  COLORS
+//-----------------------------------------------------
+
+
+$color-primary: #000;
+$color-secondary: #666;
+$white: #fff;
+$black: #000;
+
+
+//	FONTS
+//-----------------------------------------------------
+
+
+$font-primary: 'font1';
+$font-secondary: 'font2';
+
+
+//  MISC
+//-----------------------------------------------------
+
+
+$border-radius: 2px;
+$anim-time: .3s;
+
+
+// MEDIA QUERIES
+//------
+
+$small-screen:  'only screen and (max-width : 640px)';
+$medium-screen: 'only screen and (max-width : 1024px)';
+$large-screen:  'only screen and (min-width : 1025px)';
