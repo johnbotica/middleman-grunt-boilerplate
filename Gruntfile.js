@@ -58,7 +58,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: 'source/css/style.css',
-        dest: 'www/css/style.css',
+        dest: 'source/css/style.css',
       },
     },
 
@@ -66,7 +66,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'www/css/style.css' : [
-            'source/css/vendor/*.css',
+            'source/css/vendor/fonts.css',
+            'source/css/vendor/bootstrap.css',
             'source/css/style.css',
           ],
         }
@@ -90,14 +91,14 @@ module.exports = function(grunt) {
     cacheBust: {
       build: {
         options: {
-            baseDir: './www/',
-            assets: ['js/**/*.js', 'css/**/*.css', 'img/**/*.png', 'img/**/*.gif', 'img/**/*.jpg', 'img/**/*.svg'],
-            deleteOriginals: true,
+          baseDir: './www/',
+          assets: ['js/**/*.js', 'css/**/*.css', 'img/**/*.png', 'img/**/*.gif', 'img/**/*.jpg', 'img/**/*.svg'],
+          deleteOriginals: true,
         },
         files: [{
-            expand: true,
-            cwd: 'www/',
-            src: ['**/*.js', '**/*.css', '**/*.html', '**/*.json'],
+          expand: true,
+          cwd: 'www/',
+          src: ['**/*.js', '**/*.css', '**/*.html', '**/*.json'],
         }],
       },
     },
@@ -121,7 +122,7 @@ module.exports = function(grunt) {
           src: ['**'],
           dest: 'www/fonts',
         }],
-      },
+      }
     },
     //=======================================
     // WATCH
@@ -133,7 +134,11 @@ module.exports = function(grunt) {
       },
       styles: {
         files: ['source/css/**/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass_globbing', 'sass', 'postcss', 'concat', 'cssmin'],
+      },
+      images: {
+        files: ['source/img/**'],
+        tasks: ['copy:images'],
       },
       configFiles: {
         files: [ 'Gruntfile.js'],

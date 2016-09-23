@@ -25,8 +25,18 @@ $anim-time: .3s;
 
 
 // MEDIA QUERIES
-//------
+//-----------------------------------------------------
 
-$small-screen:  'only screen and (max-width : 640px)';
-$medium-screen: 'only screen and (max-width : 1024px)';
-$large-screen:  'only screen and (min-width : 1025px)';
+$phone-screen-up:     'only screen and (min-width : 544px)';
+$tablet-screen-up:    'only screen and (min-width : 768px)';
+$desktop-screen-up:   'only screen and (min-width : 992px)';
+$large-screen-up:     'only screen and (min-width : 1200px)';
+
+$phone-screen-down:     'only screen and (max-width : 543px)';
+$tablet-screen-down:    'only screen and (max-width : 767px)';
+$desktop-screen-down:   'only screen and (max-width : 991px)';
+$large-screen-down:     'only screen and (max-width : 1199px)';
+
+$phone-tablet:    'only screen and (min-width : 544px) and (max-width : 767px)';
+$tablet-desktop:  'only screen and (min-width : 768px) and (max-width: 991px)';
+$desktop-large:   'only screen and (min-width : 992px) and (max-width : 1199px)';

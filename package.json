@@ -23,8 +23,8 @@
     "grunt-sass": "^1.2.0",
     "grunt-sass-globbing": "^1.5.1",
     "http-server": "^0.9.0",
-    "postcss-flexbugs-fixes": "^2.0.0",
-    "sass-globbing": "^1.0.0-alpha1"
+    "jquery": "^3.1.0",
+    "postcss-flexbugs-fixes": "^2.0.0"
   },
   "scripts": {
     "postinstall": "bundle install",
@@ -33,15 +33,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/"
+    "url": "git+https://github.com/digital-telepathy/middleman-grunt-boilerplate"
   },
   "keywords": [
     "EverWise"
   ],
-  "author": "EverWise",
+  "author": "Digital Telepathy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com//issues"
+    "url": "https://github.com/digital-telepathy/middleman-grunt-boilerplate/issues"
   },
-  "homepage": "https://github.com/#readme"
+  "homepage": "https://github.com/digital-telepathy/middleman-grunt-boilerplate#readme"
 }
