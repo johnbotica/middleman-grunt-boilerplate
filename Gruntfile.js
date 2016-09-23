@@ -52,7 +52,6 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('postcss-flexbugs-fixes')(),
           require('autoprefixer')({browsers: 'last 2 versions'}),
         ],
       },

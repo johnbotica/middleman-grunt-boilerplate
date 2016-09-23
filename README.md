@@ -4,7 +4,7 @@
 
 ## Deployment Pipeline
 
-...
+Use this README as your projects template and include deployment instructions here.
 
 ## Dependencies
 
@@ -14,7 +14,7 @@ Currently using Ruby 2.1.2. If Ruby isn't installed on your machine, it is recom
 
 ### Bundler
 
-Unity expects its gems to be managed via [Bundler](http://bundler.io/) so you will need to ensure it has been installed first. If you've just installed Ruby, install this gem via a command line:
+This boilerplate expects its gems to be managed via [Bundler](http://bundler.io/) so you will need to ensure it has been installed first. If you've just installed Ruby, install this gem via a command line:
 
 ```bash
 $ gem install bundler
@@ -30,7 +30,7 @@ $ gem install middleman
 
 ### Node
 
-Currently Unity uses Node for local development scripting and asset compilation. The easiest way to get Node running on your location machine and manage Node versions is to use [Node Version Manager (nvm)](https://github.com/creationix/nvm). If you are developing on a Mac, the easiest way to install nvm is to use [Homebrew](http://brew.sh/):
+Currently the boilerplate uses Node for local development scripting and asset compilation. The easiest way to get Node running on your location machine and manage Node versions is to use [Node Version Manager (nvm)](https://github.com/creationix/nvm). If you are developing on a Mac, the easiest way to install nvm is to use [Homebrew](http://brew.sh/):
 
 ```bash
 $ brew install nvm
@@ -45,11 +45,25 @@ $ nvm alias default 5.0.0
 
 ### Node with Grunt
 
-Unity is running a [Node](https://nodejs.org/) server during dev and uses [Grunt](http://gruntjs.com/) to build assets and work with [BrowserSync](http://browsersync.io/) for CSS injection and page updates.
+This boilerplate is running a [Node](https://nodejs.org/) server during dev and uses [Grunt](http://gruntjs.com/) to build assets and work with [BrowserSync](http://browsersync.io/) for CSS injection and page updates.
 
 ```bash
 $ npm install
 ```
+
+### Grunt
+
+Grunt is used to handle all javascript, CSS, fonts, and image assets. This also includes updating the compiled HTML files with the new paths to hashed files.
+
+**SCSS**
+
+Grunt is using SCSS globbing to automatically include any SCSS files in the `source/css/sass/base`, `source/css/sass/helpers` and `source/css/sass/layout` folders. Just prefix file names with an underscore.
+
+Postcss with autoprefixer is also included.
+
+**JS**
+
+This boilerplate includes Browserify/Babel with ES6 support. Add any extra plugins like React support to the Browserify task.
 
 ## Setup
 
@@ -86,4 +100,4 @@ $ npm run build
 
 ### Production Server
 
-...
+Use this README as your projects template and include production environment instructions here.
