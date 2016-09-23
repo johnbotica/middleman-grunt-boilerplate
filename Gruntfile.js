@@ -186,7 +186,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-postcss');
 
   //REGISTER CUSTOM TASKS
-  grunt.registerTask('default', []);
+  grunt.registerTask('default', [], 
+    function() {
+      grunt.log.write('\n\n***No Default Task Assigned Yet***\n\nPlease run on of the following Grunt tasks: \n$ grunt dev \n$ grunt build\n\n');
+  });
+
+  grunt.registerTask('showOptions');
   grunt.registerTask('build:js', ['browserify', 'uglify']);
   grunt.registerTask('build:css', ['copy:fonts', 'sass_globbing', 'sass', 'postcss', 'concat', 'cssmin']);
   grunt.registerTask('dev', ['copy:images', 'build:css', 'build:js', 'browserSync', 'watch']);
