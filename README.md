@@ -70,7 +70,7 @@ This boilerplate includes Browserify/Babel with ES6 support. Add any extra plugi
 After cloning the project to your machine, `cd` into the project and run `npm install` (this will also fire a postinstall `bundle install` command):
 
 ```bash
-$ cd dt-marketing
+$ cd middleman-grunt-boilerplate
 $ npm install
 ```
 
