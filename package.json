@@ -27,7 +27,7 @@
     "postcss-flexbugs-fixes": "^2.0.0"
   },
   "scripts": {
-    "postinstall": "bundle install",
+    "postinstall": "bash postnpminstall.sh",
     "start": "bundle exec middleman & grunt dev & node_modules/http-server/bin/http-server ./www -p 5678 --cors",
     "build": "bundle exec middleman build"
   },
