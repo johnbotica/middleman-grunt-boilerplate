@@ -1,0 +1,21 @@
+@mixin fancy-underline($color: #ffffff) {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: 0.25em;
+    left: 0;
+    width: 0;
+
+    border-bottom: 1px solid $color;
+    opacity: 0;
+    transition: opacity $speed/2 $easing, width $speed $easing;
+  }
+
+  &:hover:after {
+    width: 100%;
+    opacity: 1;
+  }
+}

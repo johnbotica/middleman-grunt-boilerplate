@@ -2,11 +2,6 @@
 require "dotenv"
 Dotenv.load
 
-
-###
-# Page options, layouts, aliases and proxies
-###
-
 # Tell Middleman where our assets are
 set :css_dir,     "css"
 set :js_dir,      "js"
@@ -18,37 +13,24 @@ set :build_dir,   "www"
 # Enable directory indexes
 activate :directory_indexes
 
-# Per-page layout changes:
-#
+# Prevent building of README.md files
+ignore /README/
+
 # Pages with no layout
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-
-# If you need a page with an alternate layout
-# page "/path/to/file.html", layout: :otherlayout
-
-# General configuration
-
-###
-# Helpers
-###
-
-helpers do
-# DEV ASSET SERVER
-  def asset_host
-    build? ? '' : '//localhost:5678'
-  end
-end
-
-# Build-specific configuration
-configure :build do
-  # Any actions on build go here like ignoring files
-end
 
 # After `middleman build` we will run our Grunt setup
 after_build do |builder|
   print "Running Grunt...\n"
   system("grunt build")
   puts "done.\n"
+end
+
+# Minify the HTML output
+activate :minify_html do |html|
+  html.remove_quotes = false
+  html.remove_link_attributes = false
+  html.remove_input_attributes = false
 end

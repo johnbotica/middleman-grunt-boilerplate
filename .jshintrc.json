@@ -1,0 +1,11 @@
+{
+  "bitwise": true,
+  "browser": true,
+  "boss": true,
+  "eqeqeq": true,
+  "esnext": true,
+  "maxerr": 50,
+  "noarg": true,
+  "nonbsp": true,
+  "undef": true
+}

@@ -1,0 +1,10 @@
+img[data-src] {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $speed $easing;
+
+  &.loading {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
