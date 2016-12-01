@@ -1,4 +1,8 @@
 module BlogHelpers
+  def current_blog
+    current_page.blog_controller && current_page.blog_controller.name
+  end
+
   def next_articles(blog_name, article, limit = 3, wrap_around = true)
     articles = blog(blog_name).articles
     article_index = articles.find_index(article)
