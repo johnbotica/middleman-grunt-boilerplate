@@ -32,4 +32,8 @@ $(() => {
       $(this).removeClass('loading')
     })
   })
+
+  $(document).on('slide.bs.carousel', function(event){
+    $('img[data-src]', event.relatedTarget).trigger('unveil')
+  })
 })
