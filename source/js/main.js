@@ -1,6 +1,6 @@
 "use strict"
 
-// tktk highlighter
+// tktk highlighter, un-comment when ready for production deployment
 import "./lib/tktk"
 
 // CSS support classes
@@ -24,7 +24,7 @@ import '../vendor/jquery.unveil'
 
 $(() => {
   // Initialize CSS support classes
-  new Support()
+  new Support(["clip-path", "-webkit-clip-path"])
 
   // Initialize image lazy loading
   $('img[data-src]').unveil(200, function() {
@@ -33,6 +33,7 @@ $(() => {
     })
   })
 
+  // Unveil images when sliding a carousel
   $(document).on('slide.bs.carousel', function(event){
     $('img[data-src]', event.relatedTarget).trigger('unveil')
   })

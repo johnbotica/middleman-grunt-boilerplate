@@ -1,3 +1,11 @@
+/**
+ * Highlight outstanding images and copy
+ *
+ * Outlines images and highlights copy in magenta wherever "tktk" is found.
+ * Simply start outstanding copy blocks with "tktk" to highlight text. Add
+ * a "#tktk" to the end of image src valeus and un-defined href values to
+ * outline images and highlight links respectively.
+ */
 $(function(){
   $('head').append(`<style type="text/css">.tktk, a[href*="#tktk"] {
   color: magenta !important;

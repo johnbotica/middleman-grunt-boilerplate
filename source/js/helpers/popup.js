@@ -1,5 +1,15 @@
 "use strict"
 
+/**
+ * Open a centered popup
+ *
+ * Creates a centered popup on the current screen accommodating
+ * for multiple monitors.
+ *
+ * @param  {String} href   URL to load
+ * @param  {Number} width  Optional width in pixels (500 by default)
+ * @param  {Number} height Optional height in pixels (300 by default)
+ */
 const popup = function(href, width = 500, height = 300) {
   const dimensions = {
     width: width,
