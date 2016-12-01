@@ -70,6 +70,10 @@ Generates an image tag that is prepped for lazy loading via the [jQuery Unveil](
 
 ## [Blog Helpers](./blog_helpers.rb)
 
+#### `current_blog`
+
+Returns the name of the current blog being viewed.
+
 #### `next_articles`
 
 **Arguments:**
