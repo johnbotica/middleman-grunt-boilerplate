@@ -1,3 +1,18 @@
-<%= partial('partials/head') %>
-<!-- Page content here -->
-<%= partial('partials/footer') %>
+---
+title: "Middleman Boilerplate"
+page_title: "Middleman Boilerplate"
+keywords: "keyword 1, keyword 2, keyword 3"
+summary: "Middleman based site boilerplate incorporating Grunt."
+body_classes: "home-page"
+---
+<h1>Home Page</h1>
+
+<% content_for(:top_of_body) do %>
+  <p>Top of the body...</p>
+<% end %>
+
+<% content_for(:end_of_body) do %>
+  <script type="text/javascript">
+    console.log("End of body code...")
+  </script>
+<% end %>

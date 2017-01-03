@@ -6,25 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Site Title</title>
-    <meta name="description" content="">
+    <title><%= full_title(current_page.data.page_title || current_page.data.title) %></title>
+    <meta name="keywords" content="<%= current_page.data.keywords %>">
+    <meta name="description" content="<%= current_page.data.summary %>">
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="icon" href="<%= asset_host %>/favicon-16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="<%= asset_host %>/favicon-32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="<%= asset_host %>/favicon-48.png" sizes="48x48" type="image/png">
-    <link rel="icon" href="<%= asset_host %>/favicon-62.png" sizes="62x62" type="image/png">
-    <link rel="icon" href="<%= asset_host %>/favicon-192.png" sizes="192x192" type="image/png">
+    <%= partial "partials/favicon" %>
 
-    <!-- Open Graph -->
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Site Title" />
-    <meta property="og:url" content="https://www.geteverwise.com/" />
-    <meta property="og:site_name" content="Site Title" />
+    <%= partial "partials/open-graph" %>
 
-    <link rel="stylesheet" href="<%= asset_host %>/css/style.css" />
-    <script src="<%= asset_host %>/js/main.js"></script>
+    <link rel="stylesheet" href="<%= asset_url('/css/style.css') %>" />
+
+    <%= yield_content(:head) %>
   </head>
-  <body>
+  <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
+    <%= yield_content(:top_of_body) %>
 

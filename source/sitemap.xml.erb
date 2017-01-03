@@ -1,0 +1,12 @@
+<% pages = sitemap.resources.find_all{|page| page.source_file.match(/\.html/) } %>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<% pages.each do |page| %>
+  <url>
+    <loc>https://www.mindflash.com/<%= page.destination_path.gsub('/index.html','') %></loc>
+    <priority><%= page.data.priority || "0.6" %></priority>
+    <lastmod><%= File.mtime(page.file_descriptor.full_path).strftime("%Y-%m-%d") %></lastmod>
+    <changefreq><%= page.data.changefreq || "monthly" %></changefreq>
+  </url>
+<% end %>
+</urlset>

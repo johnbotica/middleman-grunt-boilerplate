@@ -1,0 +1,10 @@
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="<%= full_title(current_page.data.page_title || current_page.data.title) %>" />
+<meta property="og:url" content="<%= current_page.url %>" />
+<meta property="og:site_name" content="Middleman Boilerplate" />
+
+<% if current_page.data.summary %>
+<meta property="og:description" content="<%= current_page.data.summary %>" />
+<% end %>

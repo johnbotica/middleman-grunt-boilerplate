@@ -1,0 +1,25 @@
+{
+  "name": "Middleman Grunt Boilerplate",
+  "repository": "git@github.com:digital-telepathy/middleman-grunt-boilerplate.git",
+  "success_url": "/",
+  "scripts": {
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/php"
+    }
+  ]
+}
